@@ -1,0 +1,2 @@
+sudo docker restart aries_websocket_server1_1
+sudo docker restart aries_websocket_server2_1
