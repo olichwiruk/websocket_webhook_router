@@ -6,9 +6,7 @@ ws.onopen = function () {
         message_json = JSON.parse(message.data)
         topic_info = JSON.parse(message_json['message'])
 
-		console.log(message_json['request']['url'])
-        console.log(topic_info)
-        // console.log(message_json['request'])
+		console.log(message_json)
         console.log("\n----------------\n")
     }
     console.log("Connected")

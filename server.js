@@ -16,7 +16,7 @@ server.on('connection', function (socket, request) {
             // Note(KKrzosa): Route the message to all connected servers except the agent
             server.clients.forEach(function (client_socket) {
                 if (client_socket != socket && client_socket.readyState == WebSocket.OPEN) {
-                    data = { "message": message, "request": request }
+                    data = { "message": message, "topic": request['url'], "method": request['method'] }
 
 
                     client_socket.send(JSON.stringify(data))
